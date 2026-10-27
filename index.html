@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frainer Construtora — Construindo e transformando sonhos em realidade</title>
+<meta name="description" content="Frainer Construtora: obras, reformas residenciais e prediais no Rio de Janeiro, com a experiência de mais de 30 mil m² realizados.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2034%2038%22%3E%3Crect%20x%3D%220%22%20y%3D%224%22%20width%3D%229%22%20height%3D%2234%22%20fill%3D%22%231f2f4a%22/%3E%3Crect%20x%3D%2211%22%20y%3D%224%22%20width%3D%229%22%20height%3D%2222%22%20fill%3D%22%235b7ba6%22/%3E%3Crect%20x%3D%2222%22%20y%3D%224%22%20width%3D%2211%22%20height%3D%2210%22%20fill%3D%22%239db8dc%22/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1f2f4a; --navy-2:#2c4166; --steel:#5b7ba6; --sky:#9db8dc;
+  --ink:#141c2b; --paper:#f6f4ef; --stone:#e7e2d8; --muted:#6b7385; --white:#fff;
+  --r:4px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:300}
+.eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);font-weight:700}
+
+/* Logo (blocos) */
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.14em}
+.mark{position:relative;width:34px;height:38px;flex:none}
+.mark i{position:absolute;display:block}
+.mark i:nth-child(1){left:0;top:4px;width:9px;height:34px;background:var(--navy)}
+.mark i:nth-child(2){left:11px;top:4px;width:9px;height:22px;background:var(--steel)}
+.mark i:nth-child(3){left:22px;top:4px;width:11px;height:10px;background:var(--sky)}
+.logo small{display:block;font-size:.55rem;letter-spacing:.32em;font-weight:500;opacity:.75}
+.on-dark .mark i:nth-child(1){background:#fff}
+
+/* Nav */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(246,244,239,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--stone)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+header:not(.solid) .logo{color:#fff}
+header:not(.solid) .mark i:nth-child(1){background:#fff}
+header:not(.solid) .links a{color:#fff}
+.links{display:flex;gap:32px;align-items:center;font-size:.9rem;font-weight:500}
+.links a:hover{color:var(--steel)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:var(--r);font-weight:700;font-size:.9rem;letter-spacing:.02em;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.links .btn{padding:10px 18px}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:2px;background:currentColor;margin:7px 6px}
+header:not(.solid) .burger{color:#fff}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:flex-end;color:#fff;position:relative;overflow:hidden;
+  background:
+   linear-gradient(180deg,rgba(20,28,43,.35) 0%,rgba(20,28,43,.85) 100%),
+   url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=2000&q=70") center/cover, var(--navy)}
+.hero .wrap{padding-bottom:12vh;padding-top:140px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02;max-width:14ch;margin:18px 0 24px}
+.hero h1 em{font-style:italic;color:var(--sky)}
+.hero p{max-width:52ch;font-size:1.1rem;opacity:.88}
+.hero .ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.hero .eyebrow{color:var(--sky)}
+
+/* Números */
+.stats{background:var(--navy);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:44px 24px;border-left:1px solid rgba(255,255,255,.12)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Fraunces,serif;font-weight:300;font-size:2.6rem;line-height:1}
+.stat span{font-size:.85rem;opacity:.7}
+
+section{padding:110px 0}
+.head{max-width:640px;margin-bottom:56px}
+.head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin-top:14px}
+
+/* Sobre */
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.about-img{aspect-ratio:4/5;border-radius:var(--r);background:
+  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=70") center/cover,var(--stone);position:relative}
+.about-media{position:relative;isolation:isolate}
+.about-media::before{content:"";position:absolute;right:-22px;bottom:-22px;width:45%;height:45%;background:var(--sky);z-index:-1;border-radius:var(--r)}
+.about p{color:#3b4356;margin-bottom:18px;font-size:1.03rem}
+.partners{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.partner{border-top:2px solid var(--navy);padding-top:14px}
+.partner b{display:block}
+.partner span{font-size:.85rem;color:var(--muted)}
+
+/* Serviços */
+.services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--stone);border:1px solid var(--stone)}
+.svc{background:#fff;padding:40px 32px;transition:background .25s,color .25s}
+.svc:hover{background:var(--navy);color:#fff}
+.svc:hover p{color:rgba(255,255,255,.75)}
+.svc .n{font-family:Fraunces,serif;font-size:.95rem;color:var(--steel)}
+.svc h3{font-size:1.25rem;margin:18px 0 10px}
+.svc p{color:var(--muted);font-size:.95rem}
+
+/* Projetos */
+.proj-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.proj{position:relative;border-radius:var(--r);overflow:hidden;min-height:340px;color:#fff;display:flex;align-items:flex-end;background:var(--navy-2)}
+.proj .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}
+.proj:hover .bg{transform:scale(1.05)}
+.proj::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,28,43,.85))}
+.proj div.t{position:relative;z-index:1;padding:28px}
+.proj small{opacity:.75;letter-spacing:.15em;text-transform:uppercase;font-size:.7rem}
+.proj h3{font-family:Fraunces,serif;font-weight:300;font-size:1.7rem}
+.p1{grid-column:span 7;min-height:480px}.p2{grid-column:span 5;min-height:480px}
+.p3{grid-column:span 4}.p4{grid-column:span 4}.p5{grid-column:span 4}
+
+/* Processo */
+.process{background:var(--stone)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:s}
+.step{counter-increment:s}
+.step::before{content:"0" counter(s);display:block;font-family:Fraunces,serif;font-size:3rem;font-weight:300;color:var(--steel);line-height:1;margin-bottom:16px}
+.step h3{font-size:1.1rem;margin-bottom:8px}
+.step p{color:#4a5263;font-size:.95rem}
+
+/* Depoimento */
+.quote{background:var(--navy);color:#fff;text-align:center}
+.quote blockquote{font-family:Fraunces,serif;font-weight:300;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.35;max-width:26ch;margin:0 auto 24px}
+.quote cite{font-style:normal;opacity:.7;font-size:.9rem}
+
+/* Contato */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+.info li{list-style:none;padding:18px 0;border-bottom:1px solid var(--stone)}
+.info small{display:block;color:var(--muted);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.info a,.info span{font-size:1.1rem;font-weight:500}
+form{background:#fff;padding:40px;border-radius:var(--r);box-shadow:0 20px 50px -30px rgba(20,28,43,.35)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.8rem;font-weight:700;margin:16px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:13px 14px;border:1px solid var(--stone);border-radius:var(--r);background:var(--paper)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--steel);border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+form .btn{width:100%;justify-content:center;margin-top:24px;border:0;cursor:pointer}
+.ok{display:none;margin-top:14px;color:var(--navy);font-weight:700;text-align:center}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:56px 0 32px;font-size:.9rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .logo{color:#fff}
+footer .copy{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  /* Menu mobile */
+  .links{position:fixed;top:76px;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:stretch;gap:0;
+    background:var(--paper);padding:8px 24px 32px;overflow-y:auto;
+    opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .links.open{opacity:1;visibility:visible;transform:none}
+  header .links a{color:var(--ink)!important;font-size:1.25rem;font-weight:600;padding:20px 0;border-bottom:1px solid var(--stone);
+    display:flex;justify-content:space-between;align-items:center}
+  header .links a:not(.btn)::after{content:"→";color:var(--steel);font-weight:400}
+  header .links a.btn{color:#fff!important;background:var(--navy);border:0;justify-content:center;margin-top:28px;padding:18px;font-size:1rem;border-radius:var(--r)}
+  header.menu-open{background:var(--paper)!important;box-shadow:0 1px 0 var(--stone)}
+  header.menu-open .logo{color:var(--ink)}
+  header.menu-open .mark i:nth-child(1){background:var(--navy)}
+  header.menu-open .burger{color:var(--ink)}
+  body.no-scroll{overflow:hidden}
+  body.no-scroll .wa{display:none}
+  .burger{display:block;position:relative}
+  .burger span{transition:transform .25s,opacity .2s}
+  header.menu-open .burger span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+  header.menu-open .burger span:nth-child(2){opacity:0}
+  header.menu-open .burger span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat{border-top:1px solid rgba(255,255,255,.12)}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .proj{grid-column:span 12!important;min-height:300px!important}
+  section{padding:80px 0}
+  .row{grid-template-columns:1fr}
+  form{padding:28px 22px}
+}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="mark"><i></i><i></i><i></i></span><span>FRAINER<small>CONSTRUTORA</small></span></a>
+    <nav class="links" id="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#contato" class="btn btn-primary">Solicitar orçamento</a>
+    </nav>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Construtora · Rio de Janeiro</span>
+    <h1 class="serif">Construindo e transformando <em>sonhos</em> em realidade.</h1>
+    <p>Obras e reformas residenciais, comerciais e prediais conduzidas por arquitetos — com rigor técnico, acabamento impecável e transparência do primeiro rascunho à entrega das chaves.</p>
+    <div class="ctas">
+      <a href="#contato" class="btn btn-light">Fale com a gente →</a>
+      <a href="#projetos" class="btn btn-ghost">Ver projetos</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>30 mil+</b><span>m² de projetos realizados pela equipe</span></div>
+    <div class="stat"><b>2</b><span>sócios arquitetos à frente das obras</span></div>
+    <div class="stat"><b>100%</b><span>gestão de obra com cronograma e relatórios</span></div>
+    <div class="stat"><b>RJ</b><span>atuação em todo o Rio de Janeiro</span></div>
+  </div>
+</div>
+
+<section id="sobre" class="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal"><div class="about-img" role="img" aria-label="Obra em andamento"></div></div>
+    <div class="reveal">
+      <span class="eyebrow">Sobre nós</span>
+      <h2 class="serif" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:14px 0 28px">Experiência de arquiteto, execução de construtora.</h2>
+      <p>A <b>FRAINER Construtora</b> nasceu da sólida trajetória de seu sócio fundador, Richard Frainer, arquiteto e urbanista que atuou como sócio-diretor da a+ obras — referência em reformas residenciais e prediais, com mais de 30 mil m² de projetos realizados.</p>
+      <p>Ao lado do amigo e sócio Manuel Fiaschi, da a+ arquitetura, consolidou uma parceria marcada por excelência e inovação. Nosso propósito é atender as necessidades do seu negócio e da sua família com soluções que unem qualidade, inovação e confiança.</p>
+      <div class="partners">
+        <div class="partner"><b>Richard Frainer</b><span>Sócio fundador · Arquiteto e urbanista</span></div>
+        <div class="partner"><b>Manuel Fiaschi</b><span>Sócio · a+ arquitetura</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Nossos serviços</span>
+      <h2 class="serif">Como a Frainer pode te ajudar</h2>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc"><span class="n">01</span><h3>Reformas residenciais</h3><p>Apartamentos e casas renovados de ponta a ponta, com cuidado em cada detalhe e mínimo transtorno para quem mora.</p></div>
+      <div class="svc"><span class="n">02</span><h3>Construção</h3><p>Obras novas executadas com planejamento, controle de custos e qualidade de acabamento de alto padrão.</p></div>
+      <div class="svc"><span class="n">03</span><h3>Reformas prediais</h3><p>Fachadas, áreas comuns e infraestrutura de condomínios, com gestão junto a síndicos e moradores.</p></div>
+      <div class="svc"><span class="n">04</span><h3>Espaços comerciais</h3><p>Lojas, escritórios e consultórios entregues no prazo para o seu negócio abrir as portas sem surpresas.</p></div>
+      <div class="svc"><span class="n">05</span><h3>Gerenciamento de obra</h3><p>Cronograma, compras, equipes e relatórios periódicos — você acompanha tudo com total transparência.</p></div>
+      <div class="svc"><span class="n">06</span><h3>Projeto + execução</h3><p>Integração com arquitetura desde o início, para que o que foi desenhado seja exatamente o que é entregue.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Portfólio</span>
+      <h2 class="serif">Requinte nos detalhes</h2>
+    </div>
+    <div class="proj-grid">
+      <a class="proj p1 reveal"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=70')"></div><div class="t"><small>Reforma completa</small><h3>Casa Gávea</h3></div></a>
+      <a class="proj p2 reveal"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=70')"></div><div class="t"><small>Residencial</small><h3>Apartamento Urca</h3></div></a>
+      <a class="proj p3 reveal"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=70')"></div><div class="t"><small>Interiores</small><h3>Living Lagoa</h3></div></a>
+      <a class="proj p4 reveal"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=70')"></div><div class="t"><small>Residencial</small><h3>Suíte Leblon</h3></div></a>
+      <a class="proj p5 reveal"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=70')"></div><div class="t"><small>Comercial</small><h3>Escritório Botafogo</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="processo" class="process">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Como trabalhamos</span>
+      <h2 class="serif">Conheça nossa forma de construir</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><h3>Visita e escuta</h3><p>Entendemos o espaço, o seu momento e o que você espera da obra.</p></div>
+      <div class="step"><h3>Orçamento detalhado</h3><p>Proposta clara, item a item, com cronograma realista e sem letras miúdas.</p></div>
+      <div class="step"><h3>Execução acompanhada</h3><p>Arquitetos na obra, equipes qualificadas e relatórios com fotos a cada etapa.</p></div>
+      <div class="step"><h3>Entrega e pós-obra</h3><p>Vistoria final com você, limpeza fina e suporte depois das chaves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap reveal">
+    <blockquote>“Cada obra é a realização de um sonho. Nosso trabalho é fazer esse caminho ser tranquilo.”</blockquote>
+    <cite>— Richard Frainer, sócio fundador</cite>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Contato</span>
+      <h2 class="serif" style="font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:14px 0 28px">Vamos tirar seu projeto do papel?</h2>
+      <ul class="info">
+        <li><small>WhatsApp</small><a href="https://wa.me/5521900000000">(21) 90000-0000</a></li>
+        <li><small>E-mail</small><a href="mailto:contato@frainerconstrutora.com.br">contato@frainerconstrutora.com.br</a></li>
+        <li><small>Instagram</small><a href="https://www.instagram.com/frainerconstrutora/" target="_blank" rel="noopener">@frainerconstrutora</a></li>
+        <li><small>Atuação</small><span>Rio de Janeiro — RJ</span></li>
+      </ul>
+    </div>
+    <form class="reveal" id="form-contato">
+      <div class="row">
+        <div><label for="n">Nome</label><input id="n" required></div>
+        <div><label for="t">Telefone</label><input id="t" type="tel" required></div>
+      </div>
+      <label for="e">E-mail</label><input id="e" type="email">
+      <label for="s">Tipo de obra</label>
+      <select id="s"><option>Reforma residencial</option><option>Construção</option><option>Reforma predial</option><option>Espaço comercial</option><option>Outro</option></select>
+      <label for="m">Conte um pouco sobre o projeto</label><textarea id="m"></textarea>
+      <button class="btn btn-primary" type="submit">Solicitar orçamento</button>
+      <p class="ok">Obrigado! Entraremos em contato em breve.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#" class="logo on-dark"><span class="mark"><i></i><i></i><i></i></span><span>FRAINER<small>CONSTRUTORA</small></span></a>
+      <div>Construindo e transformando sonhos em realidade.</div>
+    </div>
+    <div class="copy">© 2026 Frainer Construtora. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5521900000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+const h=document.querySelector('header');
+const links=document.getElementById('links');
+const burger=document.getElementById('burger');
+
+// Menu mobile
+const setMenu=open=>{
+  links.classList.toggle('open',open);
+  h.classList.toggle('menu-open',open);
+  document.body.classList.toggle('no-scroll',open);
+  burger.setAttribute('aria-expanded',open);
+  burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+};
+burger.addEventListener('click',()=>setMenu(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+addEventListener('resize',()=>{if(innerWidth>900)setMenu(false)});
+
+// Header fica sólido ao rolar
+const onScroll=()=>h.classList.toggle('solid',scrollY>60);
+addEventListener('scroll',onScroll);onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const form=document.getElementById('form-contato');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  // TODO: integrar com envio real (Formspree, e-mail ou WhatsApp)
+  form.querySelector('.ok').style.display='block';
+  form.reset();
+});
+</script>
+</body>
+</html>
